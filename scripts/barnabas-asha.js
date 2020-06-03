@@ -1,11 +1,13 @@
 //This function returns the string
-
-const fullName = 'Barnabas Asha';
-const hngId = 'HNG-01877';
-const language = 'Javascript';
-
-const hngProfile = function () {
-    return `Hello World, this is ${fullName} with HNGi7 ID ${hngId} using ${language} for stage 2 task`
+let hngProfile = {
+    fullName: 'Barnabas Asha',
+    hngId: 'HNG-01877',
+    email: 'barnabee58@gmail.com',
+    language: 'Javascript',
+    loadProfile : function() {
+        return 'Hello World, this is ' + this.fullName + ' with HNGi7 ID ' + this.hngId + ' and email ' + this.email + ' using ' + this.language + ' for stage 2 task'
+    }
 }
 
-console.log(hngProfile());
+
+console.log(hngProfile.loadProfile());

@@ -1,16 +1,40 @@
 <?php
+    
+    class HelloWorld {
 
-    $fName  = "Jude";
-    $lName = "Biose";
-    $HNG_ID = "HNG-01207";
-    $language = "PHP";
+        private $fName;
+        private $lName;
+        private $HNG_ID;
+        private $email;
+        private $language;
 
-    $full_text = 'Hello World, this is '
-                      .$fName. ' ' .$lName.
-                      ' with HNGi7 ID '
-                      .$HNG_ID. ' using ' .$language. 
-                      ' for stage 2 task.';
+        function __construct($fName, $lName, $HNG_ID, $email, $language) {
 
-    $result = $full_text;
+            $this->fName = $fName;
+            $this->lName = $lName;
+            $this->HNG_ID = $HNG_ID;
+            $this->email = $email;
+            $this->language = $language;
+            $this->custom_print();
 
-    print_r($result);
+        }
+
+        function custom_print() {
+
+            $output = "Hello World, this is "
+                    .$this->fName. " " .$this->lName. 
+                    " with HNGi7 ID " .$this->HNG_ID. " and email " .$this->email. 
+                    " using " .$this->language. " for stage 2 task";
+
+            print_r($output);
+        }
+
+    }
+
+    $first_name = 'Jude';
+    $last_name = 'Biose';
+    $HNG = 'HNG-01207';
+    $email = 'Judebiose20@gmail.com';
+    $lang = 'PHP';
+
+    $obj = new HelloWorld($first_name, $last_name, $HNG, $email, $lang);
