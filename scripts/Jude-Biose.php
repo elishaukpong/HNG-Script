@@ -13,17 +13,17 @@
             $this->lName = $lName;
             $this->HNG_ID = $HNG_ID;
             $this->language = $language;
-            $this->customize_print();
+            $this->custom_print();
 
         }
 
-        function customize_print() {
+        function custom_print() {
 
             echo "Hello World, this is "
                 .$this->fName. " " .$this->lName. 
                 " with HNGi7 ID " .$this->HNG_ID. " using " 
-                .$this->language. " for stage 2 task. </br>";
-        
+                .$this->language. " for stage 2 task";
+
         }
 
     }

@@ -9,4 +9,4 @@ let message = `Hello world, this is ${lastName + " " + firstName + " "} with HNG
 
 return message;
 }
-console.log(JSON.stringify(showMessage()));
+console.log(showMessage());
