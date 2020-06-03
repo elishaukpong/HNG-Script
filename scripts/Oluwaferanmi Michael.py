@@ -2,6 +2,6 @@
 
 name = "Oluwaferanmi Michael"
 ID = "HNG-02909"
-dev_language = "Python"
+devlang = "Python"
 
-print("Hello World, this is {name} with HNGi7 ID {ID} using {dev_language} for stage 2 task")
+print("Hello World, this is" + name + " with HNGi7 ID " + ID + " using " + devlang + " for stage 2 task")
