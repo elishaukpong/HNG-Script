@@ -3,9 +3,9 @@
     function printDetails($name, $hngID, $language)
     {
 
-        return "Hello World, this is ". $name . " with HNGi7 ID " . $hngID . " using " . $language . " for stage 2 task";
+        return "Hello World, this is ". $name . " with HNGi7 ID " . $hngID . " and email $email ". " using " . $language . " for stage 2 task";
     }
 
-    echo printDetails("Jonah Jackson Joseph", "HNG-01443", "php");
+    echo printDetails("Jonah Jackson Joseph", "HNG-01443", "jonahjacksonj@gmail.com", "php");
 
 ?>

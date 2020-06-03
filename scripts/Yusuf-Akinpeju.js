@@ -4,6 +4,7 @@ function alltext() {
     last_name: "Akinpeju",
     ID: "HNG-03409",
     language: "JavaScript",
+    email: "thekodezilla@gmail.com",
   };
 
   let texts = `Hello World, this is ${user.last_name} ${user.first_name} with HNGi7 ID ${user.ID} using ${user.language} for stage 2 task`;

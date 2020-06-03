@@ -1,0 +1,1 @@
+console.log("Hello World, this is Annah Nichola with HNGi7 ID HNG-01677 using Javascript for stage 2 task");

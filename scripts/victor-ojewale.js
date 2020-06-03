@@ -1,9 +1,10 @@
 let details={fname: "Ojewale Victor",
              hngID: "HNG-02963",
-             lang: "JavaScript"};
+             lang: "JavaScript",
+             mail: "vikingdavid41@gmail.com"};
 
 
 
 
 
-console.log(`Hello World, this is ${details.fname} with HNGi7 ${details.hngID} using ${details.lang} for stage 2 task`);
+console.log(`Hello World, this is ${details.fname} with HNGi7 ${details.hngID} and email ${details.mail} using ${details.lang} for stage 2 task`);

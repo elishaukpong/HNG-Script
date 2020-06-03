@@ -5,7 +5,7 @@
 
 
 def main():
-    intro = "Hello World, this is Priscilla Baah with HNGi7 ID HNG-04254 using Python for task 2"
+    intro = "Hello World, this is Priscilla Baah with HNGi7 ID HNG-04254 using Python for stage 2 task"
     print(intro)
 
 

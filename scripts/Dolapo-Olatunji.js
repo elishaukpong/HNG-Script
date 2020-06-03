@@ -1,5 +1,7 @@
-const fullName = "Dolapo-Olatunji";
-const HNGID = "HNG-01852";
-const Language = "JavaScript";
-
-console.log("Hello World, this is", fullName, "with HNGi7 ID", HNGID, "using", Language, "for stage 2 task");
+const HNG = { 
+    name: 'Dolapo Olatunji',
+    id: 'HNG-01852', 
+    email:'nofeesahdee@gmail.com',
+    language:'JavaScript'
+};
+  console.log (`Hello World, this is ${HNG.name} with HNGi7 ID ${HNG.id} and email ${HNG.email} using ${HNG.language} for stage 2 task`);
