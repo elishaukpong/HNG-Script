@@ -1,1 +1,0 @@
-print("Hello World, this is Emmanuel Nwachukwu with INTERNSHIP ID: HNG-00964 using Python for stage 2 task")
