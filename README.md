@@ -17,9 +17,9 @@ Add your intern script to the folder:
   /scripts
 
 Following this format:
-  [surname][name].[ext]
+  [surname]-[name].[ext]
 
-Example: ada-musa.js, ade_chika.py.
+Example: ada-musa.js, ade_chika.py
 ```
 
 
