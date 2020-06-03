@@ -54,10 +54,12 @@ This will show a list of all executed scripts and the status.
 ```yaml
 Add:
   /?json
-```
-To the end of localhost:8000
-
+  
+To the end of:
+  localhost:8000
+  
 Example: localhost:8000/?json
+```
 
 **Demo Json**
 <p align="center">
