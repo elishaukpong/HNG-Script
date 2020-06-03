@@ -2,19 +2,35 @@
 
 This script gets all the files in the scripts folder and runs exec on it.
 
-Currently it supports Javascript, PHP, Python, Java, Dart programming languages alone
+## Supported Languages
+**Javascript | PHP | Python | Java | Dart |**
 
 # TO-RUN:
 
-Clone Repo: https://github.com/elishaukpong/HNG-Script.git
+```yaml
+Clone Repo:
+  https://github.com/elishaukpong/HNG-Script.git
+```
+**Next**
+```yaml
+Add your intern script to the:
+  `/scripts`folder 
 
-Add your intern script to the `/scripts` folder following this format - `[surname][name].[ext]`.
+Following this format:
+  `[surname][name].[ext]`
 
 Example: `ada-musa.js`, `ade_chika.py`.
+```
+
 
 **DON'T ADD YOUR SCRIPT TO THE ROOT DIRECTORY OF THIS PROJECT**
+```yaml
+Run:
+  php -S localhost:8000 in the HNG-Script folder
 
-run php -S localhost:8000 in the HNG-Script folder and visit the link in the browser.
+Visit the link in the browser that look like:
+  http://127.0.0.1:8080/
+```
 
 # NOTE:
 
