@@ -30,8 +30,7 @@ This will show a list of all executed scripts and the status.
 
 **Demo Image**
 <p align="center">
-<img src="https://raw.githubusercontent.com/isaacadariku
-/HNG-Script/master/Demo-Images/htmlImage.png" height="800" width="1280"  alt="imageView Demo"/>
+<img src="https://raw.githubusercontent.com/isaacadariku/HNG-Script/tree/master/Demo-Images/htmlImage.png" height="800" width="1280"  alt="imageView Demo"/>
 </p>
 
 To get a JSON VERSION
@@ -46,6 +45,5 @@ Example: localhost:8000/?json
 
 **Demo Json**
 <p align="center">
-<img src="https://raw.githubusercontent.com/isaacadariku
-/HNG-Script/master/Demo-Images/jsonImage.png" height="800" width=1280"  alt="JsonView Demo"/>
+<img src="https://raw.githubusercontent.com/isaacadariku/HNG-Script/tree/master/Demo-Images/JsonImage.png" height="800" width=1280"  alt="JsonView Demo"/>
 </p>
