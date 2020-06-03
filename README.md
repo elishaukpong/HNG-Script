@@ -30,10 +30,10 @@ This will show a list of all executed scripts and the status.
 
 **Demo Image**
 <p align="center">
-<img src="Demo-Images/htmlImage.png" height="800" width="1280"  alt="imageView Demo"/>
+<img src="Demo-Images/htmlImage.png" height="" width="1280"  alt="imageView Demo"/>
 </p>
 
-To get a JSON VERSION
+# To get a JSON VERSION
 
 ```yaml
 Add:
@@ -45,5 +45,5 @@ Example: localhost:8000/?json
 
 **Demo Json**
 <p align="center">
-<img src="Demo-Images/JsonImage.png" height="50%" width=70%"  alt="JsonView Demo"/>
+<img src="Demo-Images/JsonImage.png" height="800" width="1280"  alt="JsonView Demo"/>
 </p>
