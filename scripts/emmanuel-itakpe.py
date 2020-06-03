@@ -1,3 +1,11 @@
 # HNG stage 2 task, here is my script.
+name= "Emmanuel Itakpe Anuoluwa"
+hng= "HNG-01311"
+email= "itakpeemma@gmail.com"
+lang= "Python"
 
-print("Hello world, this is Emmanuel Itakpe with HNGi7 ID HNG-01311 using python for stage 2 task")
+def myScript ():
+    return ("Hello world, this is {} with HNGi7 ID {} and email {} using {} for stage 2 task".format(name,hng,email,lang));
+
+script_result= myScript()
+print(script_result)

@@ -1,5 +1,6 @@
-var fullName = 'Lois Adegbohungbe'
-var id = 'HNG-04138'
-var language = 'Javascript'
-var message = `Hello World, this is ${fullName} with HNGi7 ID ${id} using ${language} for stage 2 task`
-console.log(message)
+const printMessage = (fullName, id, email, language) => {
+    var message = `Hello World, this is ${fullName} with HNGi7 ID ${id} and email ${email} using ${language} for stage 2 task`
+    console.log(message)
+}
+
+printMessage('Lois Adegbohungbe', 'HNG-04138', 'loisadegbohungbe@gmail.com', 'Javascript')

@@ -1,1 +1,1 @@
-print("Hello World, this is {0} with HNGi7 ID {1} using {2} for stage 2 task".format('Anthony Nwanze','HNG-01556','Python'))
+print ("Hello World, this is Anthony Nwanze with HNGi7 ID HNG-01556 and email anthonynwanze27@gmail.com using python for stage 2 task")

@@ -16,7 +16,7 @@ foreach ($files as $file) {
 
     $extension = explode('.', $file);
 
-    switch ($extension[1]) {
+    switch (@$extension[1]) {
         case 'php':
             $startScript = "php";
             break;
@@ -40,19 +40,21 @@ foreach ($files as $file) {
             break;
     }
 
-    $f = exec($startScript . " scripts/" . $file);
+    $f = @exec($startScript . " scripts/" . $file);
 
     $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace('and email',' ', $f));
     $regexReturn  = testFileContent($f);
-    @$data[$extension[0]]->content = $newString;
-    $data[$extension[0]]->status = $regexReturn[0];
-    $data[$extension[0]]->name = str_replace('-',' ',$extension[0]);
-    $data[$extension[0]]->email = trim(getEmailFromFileContent($f));
-    $data[$extension[0]]->file = $file;
-    $data[$extension[0]]->HNGID = $regexReturn[1];
-    $data[$extension[0]]->language = $regexReturn[2];
-    $output[] = [$newString, testFileContent($f), $extension[0], $data[$extension[0]]->email];
 
+    $data[] = [
+            'file' => $file,
+            'output' => $newString,
+            'name' => str_replace('-',' ',$extension[0]),
+            'id' => $regexReturn[1],
+            'email' => trim(getEmailFromFileContent($f)),
+            'language' => $regexReturn[2],
+            'status' => $regexReturn[0],
+        ];
+    @$output[] = [$newString, testFileContent($f), str_replace('-',' ',$extension[0]), trim(getEmailFromFileContent($f))];
 }
 $outputJSON = $data;
 
@@ -73,15 +75,15 @@ function getEmailFromFileContent($string)
 }
 
 foreach ($output as $val) {
-    if ($val[1] == 'Pass') {
+    if ($val[1][0] == 'Pass') {
         $passes++;
-    } elseif ($val[1] == 'Fail') {
+    } elseif ($val[1][0] == 'Fail') {
         $fails++;
     }
 }
 
 if (isset($json) && $json == 'json') {
-
+    header('Content-type: application/json');
     echo json_encode($outputJSON);
 } else {
     ?>
@@ -140,12 +142,14 @@ if (isset($json) && $json == 'json') {
             </thead>
             <tbody>
             <?php
-            $row = 0;
+            $row = 1;
             foreach ($output as $out) {
 
-                $status = $out[1] == 'Pass' ? 1 : 0;
+                $status = $out[1][0] == 'Pass' ? 1 : 0;
                 $email = 'No Email';
-                if(isset($out[3])){
+                $statuses = $out[1][0];
+
+                if(isset($out[3]) && !empty($out[3])){
                     $email = $out[3];
                 }
                 if ($status) {
@@ -157,7 +161,7 @@ if (isset($json) && $json == 'json') {
                                 <td>
                                     $email
                                 </td>
-                                <td>$out[1] ✅</td>
+                                <td>$statuses ✅</td>
                                 </tr>
                              EOL;
                 }
@@ -170,7 +174,7 @@ if (isset($json) && $json == 'json') {
                                 <td>
                                     $email
                                 </td>
-                                <td>$out[1] ❌</td>
+                                <td>$statuses ❌</td>
                                 </tr>
                             EOL;
                 }
@@ -178,8 +182,6 @@ if (isset($json) && $json == 'json') {
 
                 flush();
                 ob_flush();
-
-                sleep(1); //used this to test the buffering
 
             }
             ?>

@@ -1,16 +1,14 @@
 
 // Main Function - Dart Language
 void main() {
-  final String Name = 'Awa Felix';  // Fullname
-  final String hngID = 'HNG-00187';               // HNGi7 ID
-  final String lang = 'Dart';        // Programming Language 
+  final String name = 'Awa Felix'; //name
+  final String hngID = 'HNG-00187'; //HNG ID
+  final String email = 'felixhope30@gmail.com';             //email
+  final String lang = 'Dart';        // Language 
 
-  //  Print the script
+  //  Print the task
   print(
-      'Hello World, this is $Name with HNGi7 ID $hngID using $lang for stage 2 task');
+      'Hello World, this is $name with HNGi7 ID $hngID and email $email using $lang for stage 2 task');
 
 }
 
-  
-  //  Declearing Variable to be use for Future purpose
-  
