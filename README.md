@@ -3,7 +3,7 @@
 This script gets all the files in the scripts folder and runs exec on it.
 
 ## Supported Languages
-**Javascript | PHP | Python | Java | Dart |**
+**Javascript | PHP | Python | Java | Dart**
 
 ## TO-RUN:
 
@@ -13,13 +13,13 @@ Clone Repo:
 ```
 **Next**
 ```yaml
-Add your intern script to the:
-  `/scripts`folder 
+Add your intern script to the folder:
+  /scripts
 
 Following this format:
-  `[surname][name].[ext]`
+  [surname][name].[ext]
 
-Example: `ada-musa.js`, `ade_chika.py`.
+Example: ada-musa.js, ade_chika.py.
 ```
 
 
