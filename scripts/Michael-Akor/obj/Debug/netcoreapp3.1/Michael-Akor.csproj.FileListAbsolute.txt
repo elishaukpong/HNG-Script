@@ -1,0 +1,13 @@
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor.deps.json
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor.runtimeconfig.json
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor.runtimeconfig.dev.json
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor.dll
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/bin/Debug/netcoreapp3.1/Michael-Akor.pdb
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.csprojAssemblyReference.cache
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.AssemblyInfoInputs.cache
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.AssemblyInfo.cs
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.csproj.CoreCompileInputs.cache
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.dll
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.pdb
+/home/aim/RiderProjects/Michael-Akor/Michael-Akor/obj/Debug/netcoreapp3.1/Michael-Akor.genruntimeconfig.cache
