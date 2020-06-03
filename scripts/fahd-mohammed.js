@@ -1,1 +1,0 @@
-console.log("Hello World, this is [Fahd Mohammed] with HNGi7 ID [HNG-00561] using [Javascript] for stage 2 task");

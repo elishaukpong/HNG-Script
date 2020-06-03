@@ -1,1 +1,0 @@
-console.log("Hello World, This is Ayomide Adefe with HNGi7 ID HNG-02441 using Javascript for stage 2 task");

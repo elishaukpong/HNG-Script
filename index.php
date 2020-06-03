@@ -49,6 +49,7 @@ foreach ($files as $file) {
 }
 $outputJSON = $data;
 
+// checking of scripts content
 function testFileContent($string)
 {
     if (preg_match('/^Hello\sWorld[,|.|!]?\sthis\sis\s[a-zA-Z]{2,}\s[a-zA-Z]{2,}(\s[a-zA-Z]{2,})?\swith\sHNGi7\sID\s(HNG-\d{3,})\susing\s[a-zA-Z|#]{2,}\sfor\sstage\s2\stask.?$/i', trim($string))) {
@@ -58,6 +59,7 @@ function testFileContent($string)
     return 'Fail';
 }
 
+// adding to pass and fail if script pass or not
 foreach ($output as $val) {
     if ($val[1] == 'Pass') {
         $passes++;
@@ -66,11 +68,12 @@ foreach ($output as $val) {
     }
 }
 
+// sending data to json using the url index.php?json
 if (isset($json) && $json == 'json') {
 
     echo json_encode($outputJSON);
 } else {
-    ?>
+?>
     <html>
 
     <head>
@@ -78,59 +81,69 @@ if (isset($json) && $json == 'json') {
     </head>
 
     <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- navbar -->
+            <nav class="navbar navbar-dark bg-dark fixed-top">
                 <span class="navbar-text">
                     HNGi7 Team Sentry
                 </span>
-            <div class="float-right text-white">
-                <small>
-                    Leader: <span class="btn btn-sm btn btn-outline-primary">@E.U</span>
-                </small> &nbsp;
-                <small>
-                    FrontEnd: <span class="btn btn-sm btn btn-outline-success">@dona</span>
-                </small> &nbsp;
-                <small>
-                    DevOps: <span class="btn btn-sm btn btn-outline-info">@Fidele</span>
-                </small> &nbsp;
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="row" style="padding: 6em 0" class="text-center">
-            <div class="col-md-4">
-                <button type="button" class="btn">
-                    Submitted <span class="badge badge-primary"><?php echo ($passes + $fails)  ?></span>
-                </button>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn">
-                    Passes <span class="badge badge-success"><?php echo ($passes)  ?></span>
-                </button>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn">
-                    Fails <span class="badge badge-danger"><?php echo ($fails)  ?></span>
-                </button>
-            </div>
+                <div class="float-right text-white">
+                    <small>
+                        Leader: <span class="btn btn-sm btn btn-outline-primary">@E.U</span>
+                    </small> &nbsp;
+                    <small>
+                        FrontEnd: <span class="btn btn-sm btn btn-outline-success">@dona</span>
+                    </small> &nbsp;
+                    <small>
+                        DevOps: <span class="btn btn-sm btn btn-outline-info">@Fidele</span>
+                    </small> &nbsp;
+                </div>
+            </nav>
+            <!-- endof navbar -->
         </div>
-        <table class="table table-hover center table-striped">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Message</th>
-                <th scope="col">Status</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            $row = 0;
-            foreach ($output as $out) {
+        <div class="container">
+            <div class="row" style="padding: 6em 0" class="text-center">
+                <!-- displaying total -->
+                <div class="col-md-4">
+                    <button type="button" class="btn">
+                        Submitted <span class="badge badge-primary"><?php echo ($passes + $fails)  ?></span>
+                    </button>
+                </div>
+                <!-- displaying pass total -->
+                <div class="col-md-4">
+                    <button type="button" class="btn">
+                        Passes <span class="badge badge-success"><?php echo ($passes)  ?></span>
+                    </button>
+                </div>
+                <!-- displaying fail total -->
+                <div class="col-md-4">
+                    <button type="button" class="btn">
+                        Fails <span class="badge badge-danger"><?php echo ($fails)  ?></span>
+                    </button>
+                </div>
+            </div>
 
-                $status = $out[1] == 'Pass' ? 1 : 0;
-                if ($status) {
-                    echo <<<EOL
+            <!-- table for script and data -->
+            <table class="table table-hover center table-striped">
+                <!-- table head -->
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <!-- table body -->
+                <tbody>
+                    <?php
+
+                    $row = 0;
+                    foreach ($output as $out) {
+
+                        $status = $out[1] == 'Pass' ? 1 : 0;
+                        if ($status) {
+                            echo <<<EOL
                                 <tr class="table-success">
                                 <th scope="row">$row</th>
                                 <td><b>$out[2]</b></td>
@@ -138,9 +151,8 @@ if (isset($json) && $json == 'json') {
                                 <td>$out[1] ✅</td>
                                 </tr>
                              EOL;
-                }
-                else {
-                    echo <<<EOL
+                        } else {
+                            echo <<<EOL
                                 <tr class="table-danger">
                                 <th scope="row">$row</th>
                                 <td><b>$out[2]</b></td>
@@ -148,27 +160,28 @@ if (isset($json) && $json == 'json') {
                                 <td>$out[1] ❌</td>
                                 </tr>
                             EOL;
-                }
-                $row++;
+                        }
+                        $row++;
 
-                flush();
-                ob_flush();
+                        flush();
+                        ob_flush();
 
-                sleep(1); //used this to test the buffering
+                        sleep(1); //used this to test the buffering
 
-            }
-            ?>
+                    }
+                    ?>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+            <!-- endof Table for scripts and data -->
 
 
-    </div>
+        </div>
 
     </body>
 
     </html>
-    <?php
+<?php
 }
 
 ?>

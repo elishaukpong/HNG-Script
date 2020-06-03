@@ -1,1 +1,0 @@
-console.log("Hello World! this is Loyal Amaechi with HNGi7 ID HNG-04661 using Javascript for stage 2 task");
