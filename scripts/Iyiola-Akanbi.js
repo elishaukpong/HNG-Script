@@ -4,7 +4,7 @@ const ID = "HNG-00391";
 
 const Language = "Javascript";
 
-Const Email = "iyiola.dev@gmail.com";
+const Email = "iyiola.dev@gmail.com";
 
 const task = () => {
 

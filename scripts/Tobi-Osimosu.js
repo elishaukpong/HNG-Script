@@ -3,7 +3,7 @@
 
 output = (lastName, firstName, middleName, HNGID, email, language) => {
   console.log(
-    `Hello World, this is ${lastName} ${firstName} with HNGi7 ID HNG-${HNGID} and email ${email} using ${language} for stage 2 task`
+    `Hello World, this is ${lastName} ${firstName} ${middleName} with HNGi7 ID HNG-${HNGID} and email ${email} using ${language} for stage 2 task`
   );
 };
 

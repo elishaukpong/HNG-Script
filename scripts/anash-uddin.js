@@ -6,4 +6,4 @@ var myInfo = {
   email: "anashuddin433@gmail.com"
 };
 //Output with object call
-console.log('Hello World, This is ' + myInfo.firstName + ' ' + myInfo.lastName + ' with HNGi7 ID HNG-'+ myInfo.id + ' and email: ' + myInfo.email + ' using ' + myInfo.language + ' for stage 2 task.');
+console.log('Hello World, this is ' + myInfo.firstName + ' ' + myInfo.lastName + ' with HNGi7 ID HNG-'+ myInfo.id + ' and email ' + myInfo.email + ' using ' + myInfo.language + ' for stage 2 task');
