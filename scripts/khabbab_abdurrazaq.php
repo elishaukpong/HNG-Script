@@ -1,3 +1,15 @@
 <?php 
-    echo "Hello World, this is Abdurrazaq Khabbab, with HNGi7 ID HNG-05015 using php for stage 2 task";
+   
+   
+
+   $firstname = "Khabbab";
+   $lastname = "Abdurrazaq";
+   $id = "HNG-05015";
+   $language = "PHP";
+
+   
+
+   $introduction = "Hello World, this is ". $firstname." ".$lastname ." with HNGi7 ID ".$id." using ".$language." for stage 2 task";
+   echo $introduction;
+   
 ?>
