@@ -1,0 +1,2 @@
+details = (fullName, id, language) => {return console.log(`Hello World, this is ${fullName} with HNGi7 ID ${id} using ${language} for stage 2 task`);}
+details('Riliwan Hassan', 'HNG-02119', 'JavaScript');
