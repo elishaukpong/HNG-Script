@@ -5,7 +5,7 @@ This script gets all the files in the scripts folder and runs exec on it.
 ## Supported Languages
 **Javascript | PHP | Python | Java | Dart |**
 
-# TO-RUN:
+## TO-RUN:
 
 ```yaml
 Clone Repo:
@@ -32,7 +32,7 @@ Visit the link in the browser that look like:
   http://127.0.0.1:8080/
 ```
 
-# NOTE:
+## NOTE:
 
 Dart programmers must have dart install on the local machine for testing.
 
@@ -49,7 +49,7 @@ This will show a list of all executed scripts and the status.
 <img src="Demo-Images/htmlImage.png" height="" width="1280"  alt="imageView Demo"/>
 </p>
 
-# To get a JSON VERSION
+## To get a JSON VERSION
 
 ```yaml
 Add:
