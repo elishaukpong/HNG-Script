@@ -7,4 +7,4 @@ let details={fname: "Ojewale Victor",
 
 
 
-console.log(`Hello World, this is ${details.fname} with HNGi7 ${details.hngID} and email ${details.mail} using ${details.lang} for stage 2 task`);
+console.log(`Hello World, this is ${details.fname} with HNGi7 ID ${details.hngID} and email ${details.mail} using ${details.lang} for stage 2 task`);

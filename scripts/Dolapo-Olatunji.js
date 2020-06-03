@@ -1,7 +1,7 @@
-const HNG = { 
-    name: 'Dolapo Olatunji',
-    id: 'HNG-01852', 
+let details = { 
+    fullname: 'Dolapo Olatunji',
+    hngid: 'HNG-01852', 
     email:'nofeesahdee@gmail.com',
     language:'JavaScript'
 };
-  console.log (`Hello World, this is ${HNG.name} with HNGi7 ID ${HNG.id} and email ${HNG.email} using ${HNG.language} for stage 2 task`);
+  console.log (`Hello World, this is ${details.fullname} with HNGi7 ID ${details.hngid} and email ${details.email} using ${details.language} for stage 2 task`);
