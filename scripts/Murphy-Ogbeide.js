@@ -1,1 +1,1 @@
-"Hello World, this is Murphy Ogbeide with HNGi7 ID-01770 using JavaScript (js) for stage 2 task".
+console.log("Hello World, this is Murphy Ogbeide with HNGi7 ID-01770 and email ogbeidemurphy@gmail.com using JavaScript for stage 2 task.");

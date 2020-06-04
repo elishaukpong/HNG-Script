@@ -1,12 +1,7 @@
-# full name variable
-full_name = "Olajide Ibukunoluwa Temitope"
+# function declaration
+def printOutput():
+  # print string with variable values in the right position
+  print ("Hello World, this is Olajide Ibukunoluwa Temitope with HNGi7 ID HNG-02393 and email ibk12mails@gmail.com using Python for stage 2 task")
 
-# programming language variable
-programming_language = "Python"
-
-# id variable
-ID = "HNG-02393"
-
-# print string with variable values in the right position
-print("Hello World, this is", full_name, "with HNGi7 ID", ID, "using", programming_language, "for stage 2 task")
-
+# function call
+printOutput()
