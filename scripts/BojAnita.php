@@ -5,7 +5,7 @@ $HNGi7='HNG-02058';
 $email='brightjaniluv@gmail.com';
 $lang='PHP';
 
-echo "HELLO World, this is $Surname $firstname with $HNGi7 and $email
-using $lang for stage two task.";
+echo "Hello World, this is $Surname $firstname with $HNGi7 and email $email
+using $lang for stage 2 task.";
 
 ?>
