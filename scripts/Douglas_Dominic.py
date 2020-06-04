@@ -1,4 +1,3 @@
-Name = "Douglas Dominic"
-ID = "HNG-01669"
-Language = "Python"
-print("Hello World, this is",Name, "with HNGi7 ID", ID,"and email ejise45@gmail.com","using",Language,"for stage 2 task")
+def Id():
+    return 'Hello World, this is Douglas Dominic with HNGi7 ID HNG-01669and email ejise45@gmail.com using Python for stage 2 task'
+print Id()
