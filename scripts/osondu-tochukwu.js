@@ -1,5 +1,5 @@
 //  Info Variables.
-const fullname='sondu Tochukwu';
+const fullname='Osondu Tochukwu';
 const id ='HNG-00158';
 const email ='tosolife@yahoo.com';
 const language='JavaScript';

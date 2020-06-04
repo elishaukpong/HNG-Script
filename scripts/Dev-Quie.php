@@ -1,7 +1,7 @@
 <?php
 
 $nameMe = 'Otu Ekong';
-$HNG7iID = 'HNG-02060';
+$hngi7Id = 'HNG-02060';
 $backendLang = 'PHP';
 $devEmail = 'devquie@gmail.com';
 
@@ -11,5 +11,5 @@ function stageTask($name, $hngid, $email, $lang) {
     }
 }
 
-$result = stageTask($nameMe, $HNG7iID, $devEmail, $backendLang);
+$result = stageTask($nameMe, $hngi7Id, $devEmail, $backendLang);
 print($result);

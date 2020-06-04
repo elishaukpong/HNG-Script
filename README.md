@@ -59,7 +59,7 @@ This will show a list of all executed scripts and the status.
 
 **Demo Image**
 <p align="center">
-<img src="Demo-Images/htmlImage.png" height="" width="1280"  alt="imageView Demo"/>
+<img src="Demo-Images/html-Image.png" height="" width="1280"  alt="imageView Demo"/>
 </p>
 
 ## To get a JSON VERSION
