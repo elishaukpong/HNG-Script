@@ -2,6 +2,9 @@
 
 $json = $_SERVER["QUERY_STRING"] ?? '';
 
+$passes = 0;
+$fails = 0;
+
 $files = scandir("scripts/");
 
 unset($files[0]);
@@ -10,57 +13,14 @@ unset($files[2]);
 $output = [];
 $outputJSON = [];
 $data = [];
-$passes = 0;
-$fails = 0;
-foreach ($files as $file) {
-
-    $extension = explode('.', $file);
-
-    switch ($extension[1]) {
-        case 'php':
-            $startScript = "php";
-            break;
-        case 'js':
-            $startScript = "node";
-            break;
-        case 'py':
-            $startScript = "python";
-            break;
-        case 'dart':
-            $startScript = "dart";
-            break;
-        case 'java':
-            $startScript = "java";
-
-            exec("javac scripts/" . $file);
-            break;
-
-        default:
-            $startScript = "php";
-            break;
-    }
-
-    $f = exec($startScript . " scripts/" . $file);
-
-    $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace('and email',' ', $f));
-
-    @$data[$extension[0]]->content = $newString;
-    $data[$extension[0]]->status = testFileContent($f);
-    $data[$extension[0]]->name = str_replace('-',' ',$extension[0]);
-    $data[$extension[0]]->email = getEmailFromFileContent($f);
-    $data[$extension[0]]->file = $file;
-    $output[] = [$newString, testFileContent($f), $extension[0], $data[$extension[0]]->email];
-
-}
-$outputJSON = $data;
 
 function testFileContent($string)
 {
-    if (preg_match('/^Hello\sWorld[,|.|!]*\sthis\sis\s([a-zA-Z|-]{2,}\s){1,6}with\sHNGi7\sID\s(HNG-\d{3,})\sand\semail\s{1,3}(([\w+\.\-]+)@([\w+\.\-]+)\.([a-zA-Z]{2,5}))\s{1,3}using\s[a-zA-Z|#]{2,}\sfor\sstage\s2\stask.?$/i', trim($string))) {
-        return 'Pass';
+    if (preg_match('/^Hello\sWorld[,|.|!]*\sthis\sis\s([a-zA-Z|-]{2,}\s){1,6}with\sHNGi7\sID\s(HNG-\d{3,})\sand\semail\s{1,3}(([\w+\.\-]+)@([\w+\.\-]+)\.([a-zA-Z]{2,5}))\s{1,3}using\s([a-zA-Z|#]{2,})\sfor\sstage\s2\stask.?$/i', trim($string), $values)) {
+        return ['pass',$values[2],$values[7]];
     }
 
-    return 'Fail';
+    return ['fail',null,null];
 }
 
 function getEmailFromFileContent($string)
@@ -70,18 +30,13 @@ function getEmailFromFileContent($string)
     return @$matches[0][0];
 }
 
-foreach ($output as $val) {
-    if ($val[1] == 'Pass') {
-        $passes++;
-    } elseif ($val[1] == 'Fail') {
-        $fails++;
-    }
-}
 
 if (isset($json) && $json == 'json') {
-    echo json_encode($outputJSON);
-} else {
-    ?>
+    header('Content-type: application/json');
+
+}else{
+    if (ob_get_level() == 0) ob_start();
+?>
     <html>
 
     <head>
@@ -91,9 +46,9 @@ if (isset($json) && $json == 'json') {
     <body>
     <div class="container-fluid">
         <nav class="navbar navbar-dark bg-dark fixed-top">
-                <span class="navbar-text">
-                    HNGi7 Team Sentry
-                </span>
+                    <span class="navbar-text">
+                        HNGi7 Team Sentry
+                    </span>
             <div class="float-right text-white">
                 <small>
                     Leader: <span class="btn btn-sm btn btn-outline-primary">@E.U</span>
@@ -136,48 +91,94 @@ if (isset($json) && $json == 'json') {
             </tr>
             </thead>
             <tbody>
-            <?php
-            $row = 0;
-            foreach ($output as $out) {
 
-                $status = $out[1] == 'Pass' ? 1 : 0;
-                $email = 'No Email';
-                if(isset($out[3])){
-                    $email = $out[3];
+            <?php
+            $row = 1;
+
+            foreach ($files as $file) {
+
+                $extension = explode('.', $file);
+
+                switch (@$extension[1]) {
+                    case 'php':
+                        $startScript = "php";
+                        break;
+                    case 'js':
+                        $startScript = "node";
+                        break;
+                    case 'py':
+                        $startScript = "python";
+                        break;
+                    case 'dart':
+                        $startScript = "dart";
+                        break;
+                    case 'java':
+                        $startScript = "java";
+
+                        exec("javac scripts/" . $file);
+                        break;
+
+                    default:
+                        $startScript = "php";
+                        break;
                 }
-                if ($status) {
-                    echo <<<EOL
+
+                $f = @exec($startScript . " scripts/" . $file);
+
+
+                $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace('and email',' ', $f));
+                $regexReturn  = testFileContent($f);
+
+                $data[] = [
+                    'file' => $file,
+                    'output' => $newString,
+                    'name' => str_replace('-',' ',$extension[0]),
+                    'id' => $regexReturn[1],
+                    'email' => trim(getEmailFromFileContent($f)),
+                    'language' => $regexReturn[2],
+                    'status' => $regexReturn[0],
+                ];
+
+                    $testEmailVariable = trim(getEmailFromFileContent($f));
+                    $status = testFileContent($f)[0];
+                    $email = 'No Email';
+                    $name = str_replace('-',' ',$extension[0]);
+
+                    if(isset($testEmailVariable) && !empty($testEmailVariable)){
+                        $email = $testEmailVariable;
+                    }
+
+                    if ($status == 'pass') {
+
+                        echo <<<EOL
                                 <tr class="table-success">
                                 <th scope="row">$row</th>
-                                <td><b>$out[2]</b></td>
-                                <td>$out[0]</td>
+                                <td><b>$name</b></td>
+                                <td>$newString</td>
                                 <td>
                                     $email
                                 </td>
-                                <td>$out[1] ✅</td>
+                                <td>$status ✅</td>
                                 </tr>
                              EOL;
-                }
-                else {
-                    echo <<<EOL
+                    }
+                    else {
+                        echo <<<EOL
                                 <tr class="table-danger">
                                 <th scope="row">$row</th>
-                                <td><b>$out[2]</b></td>
-                                <td>$out[0]</td>
+                                 <td><b>$name</b></td>
+                                <td>$newString</td>
                                 <td>
                                     $email
                                 </td>
-                                <td>$out[1] ❌</td>
+                                <td>$status ❌</td>
                                 </tr>
                             EOL;
-                }
-                $row++;
+                    }
+                    $row++;
 
-                flush();
-                ob_flush();
-
-                sleep(1); //used this to test the buffering
-
+                    ob_flush();
+                    flush();
             }
             ?>
 
@@ -190,7 +191,59 @@ if (isset($json) && $json == 'json') {
     </body>
 
     </html>
-    <?php
+<?php
 }
 
+if (isset($json) && $json == 'json') {
+
+    foreach ($files as $file) {
+
+        $extension = explode('.', $file);
+
+        switch (@$extension[1]) {
+            case 'php':
+                $startScript = "php";
+                break;
+            case 'js':
+                $startScript = "node";
+                break;
+            case 'py':
+                $startScript = "python";
+                break;
+            case 'dart':
+                $startScript = "dart";
+                break;
+            case 'java':
+                $startScript = "java";
+
+                exec("javac scripts/" . $file);
+                break;
+
+            default:
+                $startScript = "php";
+                break;
+        }
+
+        $f = @exec($startScript . " scripts/" . $file);
+
+
+        $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace('and email',' ', $f));
+        $regexReturn  = testFileContent($f);
+
+        $data[] = [
+            'file' => $file,
+            'output' => $newString,
+            'name' => str_replace('-',' ',$extension[0]),
+            'id' => $regexReturn[1],
+            'email' => trim(getEmailFromFileContent($f)),
+            'language' => $regexReturn[2],
+            'status' => $regexReturn[0],
+        ];
+        $outputJSON = $data;
+
+    }
+
+
+    echo json_encode($outputJSON);
+}
 ?>

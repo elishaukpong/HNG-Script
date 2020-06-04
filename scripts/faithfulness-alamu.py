@@ -1,8 +1,1 @@
-outformat = "Hello World, this is %s with HNGi7 ID %s using %s for stage 2 task\n"
-name = "Faithfulness Alamu"
-hngid = "HNG-02407"
-language = "python3"
-
-
-if __name__ == '__main__':
-	print(outformat % (name, hngid, language))
+print("Hello World, this is Faithfulness Alamu with HNGi7 ID HNG-02407 and email vaguemail369@gmail.com using Python for stage 2 task")

@@ -1,5 +1,5 @@
 const lanreScript=(value)=>{
-    console.log(`Hello World, this is ${value.name} with HNGi7 ID ${value.id} using ${value.language} for stage 2 task`)
+    console.log(`Hello World, this is ${value.name} with HNGi7 ID ${value.id} and email ${value.email} using ${value.language} for stage 2 task`)
 }
 
 const value={

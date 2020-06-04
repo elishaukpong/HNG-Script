@@ -4,10 +4,6 @@
    """
 
 
-def main():
-    intro = "Hello World, this is Priscilla Baah with HNGi7 ID HNG-04254 using Python for stage 2 task"
-    print(intro)
+intro = "Hello World, this is Priscilla Baah with HNGi7 ID HNG-04254 and email pyfbaah@gmail.com using Python for stage 2 task"
+print(intro)
 
-
-if __name__ == '__main__':
-    main()
