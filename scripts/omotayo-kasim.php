@@ -1,6 +1,4 @@
 <?php
-echo "Hello World, My name is Omotayo kasim. My HNGi7 ID reads HNG-03625 and my email is as follows:
-smartfocusdrive@gmail.com. I am using PHP to execute the stage 2 team task.";
-
+echo "Hello World, this is Omotayo kasim with HNGi7 ID HNG-03625 and email smartfocusdrive@gmail.com using PHP for stage 2 task";
 
 ?>

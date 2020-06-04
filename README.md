@@ -6,7 +6,7 @@
 
 **Javascript | PHP | Python | Java | Dart**
 
-## TO-RUN:
+## TO-CONTRIBUTE:
 
 ```yaml
 Clone Repo:
@@ -43,11 +43,10 @@ Visit the link in the browser that look like:
 
 ## NOTE:
 
-PHP MUST be of version 7.3 and above
-Python MUST be installed v2 preferrably
-Dart must be installed on your server.
-and Java too
-
+PHP version 7.3 and above MUST be installed,
+Python version 2 and above MUST be installed,
+Dart MUST be installed and
+Java MUST be installed.
 
 visit https://dart.dev/get-dart to install dart on your local machine.
 
@@ -76,5 +75,5 @@ Example: localhost:8000/?json
 
 **Demo Json**
 <p align="center">
-<img src="Demo-Images/jsonImage.png" height="" width="1280"  alt="jsonView Demo"/>
+<img src="Demo-Images/json-Image.png" height="" width="1280"  alt="jsonView Demo"/>
 </p>

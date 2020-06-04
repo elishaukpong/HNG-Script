@@ -1,9 +1,12 @@
 const details = {
-  name: "Emmanuel Ikwuoma",
-  hngID: "HNG-04940",
-  lang: "JavaScript",
-};
+    name:   "Ikwuoma Emmanuel",
+    hngID  : "HNG-04940",
+    lang:   "JavaScript",
+    email: "emmanuelikwuoma7@gmail.com"
 
-console.log(
-  `Hello World, this is ${details.name} with HNGi7 ID ${details.hngID} using ${details.lang} for stack 2 task`
-);
+}
+
+const {name, hngID, lang, email} = details
+
+const message = `Hello World, this is ${name} with HNGi7 ID ${hngID} and email ${email} using ${lang} for stage 2 task`;
+console.log(message);

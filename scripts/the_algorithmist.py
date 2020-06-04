@@ -17,7 +17,7 @@ def build_intro(p):
     str
         formated introduction string for the person passed as a dict.
     '''
-    return 'Hello World, this is {} with  HNGi7 ID {} and email {} using {} for stage 2 task'.format(p["name"],p["id"],p["email"],p["lang"])
+    return 'Hello World, this is {} with HNGi7 ID {} and email {} using {} for stage 2 task'.format(p["name"],p["id"],p["email"],p["lang"])
 
 
 mine = {'name': 'Erastus Amunwe', 'id':'HNG-00762', 'lang': 'Python', 'email':'eneamunwe@gmail.com'}

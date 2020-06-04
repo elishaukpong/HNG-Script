@@ -1,2 +1,2 @@
-const HNG = { name: 'Akash Prasher', id: 'HNG-06260', lang:'JavaScript', email:'17bcs2419@cuchd.in'};
-console.log (`Hello World, this is ${HNG.name} with HNGi7 ID ${HNG.id} and email ${HNG.email} using ${HNG.lang} for stage 2 task`);
+const HNG = { myName: 'Akash Prasher', myId: 'HNG-06260', myLang:'JavaScript', myEmail:'17bcs2419@cuchd.in'};
+console.log (`Hello World, this is ${HNG.myName} with HNGi7 ID ${HNG.myId} and email ${HNG.myEmail} using ${HNG.myLang} for stage 2 task`);

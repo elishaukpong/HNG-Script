@@ -2,10 +2,8 @@
 
 $json = $_SERVER["QUERY_STRING"] ?? '';
 
-$passes = 0;
-$fails = 0;
-
 $files = scandir("scripts/");
+
 
 unset($files[0]);
 unset($files[1]);
@@ -21,6 +19,7 @@ function testFileContent($string)
     return ['fail',null,null];
 }
 
+//todo this can be refactored to capture the email from the testFileContent() -- but leave as is.
 function getEmailFromFileContent($string)
 {
     preg_match('/\s?(([\w+\.\-]+)@([\w+\.\-]+)\.([a-zA-Z]{2,5}))/i', trim($string) , $matches, PREG_OFFSET_CAPTURE);
@@ -28,8 +27,8 @@ function getEmailFromFileContent($string)
     return @$matches[0][0];
 }
 
-
-if (isset($json) && $json == 'json') {
+//capture the json version
+if (isset($json) && strtolower($json) == 'json') {
     header('Content-type: application/json');
 
     foreach ($files as $file) {
@@ -88,6 +87,10 @@ if (isset($json) && $json == 'json') {
 
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script
+                src="https://code.jquery.com/jquery-3.5.1.min.js"
+                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+                crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -110,8 +113,23 @@ if (isset($json) && $json == 'json') {
         </nav>
     </div>
     <div class="container">
-        <div class="row" style="padding: 2em 0" class="text-center">
 
+        <div class="row" style="padding: 6em 0" class="text-center">
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn">
+                    Submitted <span class="badge badge-primary"><?php echo count($files) ?></span>
+                </button>
+            </div>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn">
+                    Passes <span class="badge badge-success" id="success">0</span>
+                </button>
+            </div>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn">
+                    Fails <span class="badge badge-danger" id="failure">0</span>
+                </button>
+            </div>
         </div>
         <table class="table table-hover center table-striped">
             <thead class="thead-dark">
@@ -162,15 +180,16 @@ if (isset($json) && $json == 'json') {
                 $newString = str_ireplace(getEmailFromFileContent($f),' ', str_ireplace('and email',' ', $f));
                 $regexReturn  = testFileContent($f);
 
-                $data[] = [
-                    'file' => $file,
-                    'output' => $newString,
-                    'name' => str_replace('-',' ',$extension[0]),
-                    'id' => $regexReturn[1],
-                    'email' => trim(getEmailFromFileContent($f)),
-                    'language' => $regexReturn[2],
-                    'status' => $regexReturn[0],
-                ];
+//                $data[] = [
+//                    'file' => $file,
+//                    'output' => $newString,
+//                    'name' => str_replace('-',' ',$extension[0]),
+//                    'id' => $regexReturn[1],
+//                    'email' => trim(getEmailFromFileContent($f)),
+//                    'language' => $regexReturn[2],
+//                    'status' => $regexReturn[0],
+//                ];
+
 
                 $testEmailVariable = trim(getEmailFromFileContent($f));
                 $status = testFileContent($f)[0];
@@ -193,7 +212,13 @@ if (isset($json) && $json == 'json') {
                                 </td>
                                 <td>$status ✅</td>
                                 </tr>
+
                              EOL;
+                    ?>
+                    <script>
+                        $('#success').html(Number($('#success').html()) + 1);
+                    </script>
+                    <?php
                 }
                 else {
                     echo <<<EOL
@@ -207,6 +232,12 @@ if (isset($json) && $json == 'json') {
                                 <td>$status ❌</td>
                                 </tr>
                             EOL;
+
+                    ?>
+                    <script>
+                        $('#failure').html(Number($('#failure').html()) + 1);
+                    </script>
+                    <?php
                 }
                 $row++;
 
