@@ -1,6 +1,5 @@
-Fullname='David Adediji'
-ID='HNG-05328'
-Email='davidadediji@gmail.com'
-Language='Python'
-
-print ('Hello World, this is {} with HNGi7 ID {} and email {} using {} for stage 2 task'.format(Fullname,ID,Email,Language))
+name="David Adediji"
+id="HNGi7-05328"
+email="davidadediji@gmail.com"
+language="Python"
+print("Hello World, this is " + name + " with HNGi7 ID " + id + " and email " + email + " using " + language + " for stage 2 task")
