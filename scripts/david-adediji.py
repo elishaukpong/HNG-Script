@@ -1,6 +1,5 @@
-fullname='David Adediji'
-ID='HNG-0528'
-email='davidadediji@gmail.com'
-language='Python'
-
-print(f'Hello World, this is {fullname} with HNGi7{ID} and email {email} using {language} for stsge 2 tasks')
+Fullname='David Adediji'
+ID='HNG-05328'
+Email='davidadediji@gmail.com'
+Language='Python'
+print(f'Hello World, this is {Fullname} with HNGi7 ID {ID} and email {Email} using {Language} for stage 2 task')
