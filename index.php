@@ -43,7 +43,7 @@ if (isset($json) && strtolower($json) == 'json') {
                 $startScript = "node";
                 break;
             case 'py':
-                $startScript = "python";
+                $startScript = "python3";
                 break;
             case 'dart':
                 $startScript = "dart";
@@ -101,13 +101,13 @@ if (isset($json) && strtolower($json) == 'json') {
                     </span>
             <div class="float-right text-white">
                 <small>
-                    Leader: <span class="btn btn-sm btn btn-outline-primary">@E.U</span>
+                    Leader: <span class="btn btn-sm btn btn-outline-primary">@Kadet</span>
                 </small> &nbsp;
                 <small>
-                    FrontEnd: <span class="btn btn-sm btn btn-outline-success">@dona</span>
+                    BackEnd: <span class="btn btn-sm btn btn-outline-success">@desola</span>
                 </small> &nbsp;
                 <small>
-                    DevOps: <span class="btn btn-sm btn btn-outline-info">@Fidele</span>
+                    DevOps: <span class="btn btn-sm btn btn-outline-info">@geofferyj</span>
                 </small> &nbsp;
             </div>
         </nav>
@@ -158,7 +158,7 @@ if (isset($json) && strtolower($json) == 'json') {
                         $startScript = "node";
                         break;
                     case 'py':
-                        $startScript = "python";
+                        $startScript = "python3";
                         break;
                     case 'dart':
                         $startScript = "dart";

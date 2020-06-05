@@ -1,8 +1,8 @@
-class EzeakudoluChibuzor{
+class Ezeakudolu-Chibuzor{
 
     public static void main(String[] args) {
         String name = "Chibuzor Ezeakudolu Stanley";
-        String id = "01240";
+        String id = "HNG-01240";
         String email = "stigezeh21@gmail.com";
         String language = "java";
 

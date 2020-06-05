@@ -1,10 +1,10 @@
-<?PHP 
+<?php 
 $_first_name = "Alumona Micah";
 $_id = "HNG-04840";
 $_email = "micahalumona@gmail.com";
-$_lang = "PHP";
+$_lang = "php";
 
-echo "Hello world, this is ".$_first_name."  with HNGi7 ID ".$_id." and email ".$_email." using ".$_lang." for stage 2 task";
+echo "Hello World, this is ".$_first_name." with HNGi7 ID ".$_id." and email ".$_email." using ".$_lang." for stage 2 task";
 
 
 ?>

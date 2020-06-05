@@ -1,1 +1,5 @@
-print("Hello World, this is Emmanuel Nwachukwu with INTERNSHIP ID: HNG-00964 and email: imanuelnwachukwu17@gmail.com using Python for stage 2 task.")
+name = str("Emmanuel Nwachukwu")
+Internid = str('HNG-00964')
+email = str('imanuelnwachukwu17@gmail.com')
+language = str('Python')
+print ('Hello World, this is ' + name  + ' with HNGi7 ID ' + Internid + ' and email ' + email + ' using ' + language + ' for stage 2 task.')

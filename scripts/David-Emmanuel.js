@@ -3,7 +3,7 @@ var FullName= 'David Emmanuel',
         Email = 'dave.emix@gmail.com',
         Language = 'Javascript';
 
-var Message ='Hello world, this is '+ FullName +' with HNGi7 ID '+ HNGi7ID + ' and email '+ Email + ' using ' + Language + ' for stage 2.';
+var Message ='Hello World, this is '+ FullName +' with HNGi7 ID '+ HNGi7ID + ' and email '+ Email + ' using ' + Language + ' for stage 2 task.';
 
 function DisplayMessage(msg)
 {

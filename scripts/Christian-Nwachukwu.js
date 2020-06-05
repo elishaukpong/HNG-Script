@@ -1,15 +1,12 @@
-//Full Name
-const fname = 'Christian Nwachukwu';
+//The function takes fname,id,email and lang as parameters.
 
-//Intern ID
-const id = '00941';
+function myDetails(fname, id, email, lang) {
 
-//Email
-const email = 'christian.nwachukwu2020@gmail.com';
+    console.log(`Hello World, this is ${fname} 
+                \nwith HNGi7 ID ${id} and email: ${email} 
+                \nusing ${lang} for stage 2 task.`);
+    
+}
 
-//Programming Language
-const lang = 'Node.js';
-
-console.log(`Hello World, this is ${fname} with 
-            \nHNGi7 ID ${id} and email: ${email} using 
-            \n${lang} for stage 2 task.`);
+//Calling function with the following arguments.
+myDetails("Christian Nwachukwu", "HNG-00941", "christian.nwachukwu2020@gmail.com","Javascript");

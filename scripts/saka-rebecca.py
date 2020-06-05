@@ -1,17 +1,7 @@
-
-#Varible declaration
-
-Name = "Rebecca Saka"
-Email = "beccasaka@gmail.com"
-Id = "HNG-05990"
-
-
-#Function Definition
-
 def TaskDef():
-    print("Hello world, this is",Name,"With HNGi7 ID",Id,"and email",Email,"using python for stage 2 task")
+    print(
+        "Hello World, this is Rebecca Saka with HNGi7 ID HNG-05990 and email beccasaka@gmail.com using python for stage 2 task"
+    )
 
-
-#Function Call
 
 TaskDef()
