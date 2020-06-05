@@ -6,24 +6,25 @@ $tsk_lang = "PHP";
 $email = "egbekwunwanedilobu@gmail.com";
 
 //Message Strings
-$msg1 = 'Hello World, this is '.$fullname;
-$msg2 = 'with HNGi7 ID '.$hng_id;
-$msg3 = 'and email '.$email;
-$msg4 = 'using '.$tsk_lang;
+$msg1 = "Hello World, this is".$fullname;
+$msg2 = "with HNGi7 ID ".$hng_id;
+$msg3 = "and email ".$email;
+$msg4 = "using ".$tsk_lang;
+$msg5 = "for stage 2 task";
 
 //function to display Message with declared global variables
 function display_Message(){
   global $fullname;  global $hng_id; global $tsk_lang;  
   global $email; global $msg1; global $msg2; 
-  global $msg3;  global $msg4;
+  global $msg3;  global $msg4; global $msg5;
 
 //Message Strings
-$msg1 = 'Hello World, this is '.$fullname;
-$msg2 = 'with HNGi7 ID '.$hng_id;
-$msg3 = 'and email '.$email;
-$msg4 = 'using '.$tsk_lang;
-echo $msg1." ".$msg2." ".$msg3." ".$msg4. " for stage 2 task";
-}
+      $msg1 = "Hello World, this is ".$fullname;
+      $msg2 = "with HNGi7 ID ".$hng_id;
+      $msg3 = "and email ".$email;
+      $msg4 = "using ".$tsk_lang;
+  echo $msg1." ".$msg2." ".$msg3." ".$msg4." ".$msg5;
+  }
 $func_Message = "display_Message();";
 eval ($func_Message);
 ?>

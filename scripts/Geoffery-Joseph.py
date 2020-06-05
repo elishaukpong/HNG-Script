@@ -7,7 +7,7 @@ class Intern:
         self.lang = lang
     
     def introduce(self):
-        message = f'Hello World, this is {self.name} with HNGi7 ID {self.hng_id} and email {self.email} using {self.lang} for stage 2 task'
+        message = 'Hello World, this is {} with HNGi7 ID {} and email {} using {} for stage 2 task'.format(self.name, self.hng_id, self.email, self.lang)
         print(message)
 
 
