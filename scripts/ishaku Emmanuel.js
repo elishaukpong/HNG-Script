@@ -6,5 +6,5 @@ var user = {
     language: "JavaScript",
     id: "HNG-03207",
     };
-    var myInfo = `Hello World, this is ${user.firstName} ${user.middleName} ${user.lastName} with HNGi7 ID ${user.id} ${user.email} using ${user.language} for Stage 2 task. `;
+    var myInfo = `Hello World, this is ${user.firstName} ${user.middleName} ${user.lastName} with HNGi7 ID ${user.id} and ${user.email} using ${user.language} for Stage 2 task.`;
     console.log(myInfo);
