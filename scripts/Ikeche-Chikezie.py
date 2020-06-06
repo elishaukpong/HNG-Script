@@ -1,6 +1,7 @@
-Name = 'Chikezie Ikeche'
-Language = 'python'
+Name = "Chikezie Ikeche"
+Language = "python"
 id = "HNG-02621"
 email = "ikechex@gmail.com"
 
-print("Hello World, this is", Name, "with HNGi7 ID", id, "and email", email, "using", Language, "for stage 2 test.",)
+print("Hello world, this is {} with HNGi7 ID {} and email {} using {} for stage task 2.".format("Chikezie Ikeche", "HNG-02621", "ikechex@gmail.com", "python"))
+
