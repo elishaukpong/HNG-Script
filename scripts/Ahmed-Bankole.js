@@ -1,5 +1,5 @@
 const hng = { 
-    name: 'Ahmed BBankole',
+    name: 'Ahmed Bankole',
     id: 'HNG-02467', 
     language:'JavaScript',
     email:'kidrolex19@gmail.com'
