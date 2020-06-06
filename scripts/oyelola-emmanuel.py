@@ -1,10 +1,11 @@
-myFirstName = "Oyelola"
-myLastName = "Emmanuel"
-myHNGID = "HNG-02651"
-myEmail = "emmanoyelola@gmail.com"
+details = "Hello World, this is Oyelola Emmanuel with HNGi7 ID HNG-02651 and email emmanoyelola@gmail.com using python for stage 2 task"
+def myfunction ():
+    print(details)
+
+myfunction()
 
 
-print("Hello World, this is",myFirstName,myLastName, "with HNGi7 ID",myHNGID, 
-	"and email",myEmail,"using python for stage 2 task")
+
+
 
 

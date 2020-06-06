@@ -6,7 +6,7 @@ class Person {
     this.language = language;
   }
   greeting() {
-    console.log(`Hello World,this is ${this.fullname} with HNGi7 ID ${this.id} and email ${this.email} using ${this.language} for stage 2 task`);
+    console.log(`Hello World, this is ${this.fullname} with HNGi7 ID ${this.id} and email ${this.email} using ${this.language} for stage 2 task`);
   }
 }
 

@@ -9,7 +9,7 @@ const myProfile = {
 
 const {greetings, name, email, id, language, stage} = myProfile;
 const hngTask = (greetings, name, email, id, language, stage) => {
-    return `${greetings}, this is ${name} with HNGi7 ID ${id} and email ${email} using ${language} for stage ${stage} task.`
+   console.log(`${greetings}, this is ${name} with HNGi7 ID ${id} and email ${email} using ${language} for stage ${stage} task.`); 
 }
 
 hngTask(greetings, name, email, id, language, stage);

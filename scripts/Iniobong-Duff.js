@@ -6,6 +6,6 @@ var email = "Duffdev001@gmail.com";
 var language = "JavaScript";
 
 function welcome() {
-  return `Hello World, this is ${fullName}, with HNGi7 ID ${id} and email ${email} using ${language} for stage 2 task`;
+  return `Hello World, this is ${fullName} with HNGi7 ID ${id} and email ${email} using ${language} for stage 2 task`;
 }
 console.log(welcome());

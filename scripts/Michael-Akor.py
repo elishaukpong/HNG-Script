@@ -1,5 +1,1 @@
-fullName = " Akor Michael "
-hngID = " HNG-00961 "
-email = " michaelaim60@gmail.com "
-language = " c# "
-print("Hello World. this is "+ fullName + "with HNGi7 ID" + hngID + "and" + email +  "using" + language + "for stage 2 task")
+print("Hello World. this is Akor Michael with HNGi7 IDHNG-00961and email michaelaim60@gmail.com using  c# for stage 2 task")
