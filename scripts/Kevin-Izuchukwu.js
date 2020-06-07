@@ -5,7 +5,7 @@ let user = {
     language: "Javascript"
 }
 
-console.log(`Hello World, this is ${user.name} with the HNGi7 ID ${user.id} and email ${user.email} using ${user.language} for stage 2 task`);
+console.log(`Hello World, this is ${user.name} with HNGi7 ID ${user.id} and email ${user.email} using ${user.language} for stage 2 task`);
 
 
 
